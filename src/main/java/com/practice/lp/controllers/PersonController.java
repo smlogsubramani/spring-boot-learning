@@ -22,6 +22,12 @@ public class PersonController {
 		return ResponseEntity.status(HttpStatus.OK).body(persons);
 	}
 	
+	
+	@GetMapping("/person")
+	public ResponseEntity<List<Person>> getAllPerson() {
+		return ResponseEntity.status(HttpStatus.OK).body(persons);
+	}
+	
 	@PostMapping("/person")
 	public ResponseEntity<String> setAPerson(@RequestBody Person createdPerson) {
 		persons.add(createdPerson);
